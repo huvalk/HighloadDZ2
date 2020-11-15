@@ -1,0 +1,83 @@
+//// -- LEVEL 1
+//// -- Tables and References
+
+
+// Creating references
+// You can also define relaionship separately
+// > many-to-one; < one-to-many; - one-to-one
+
+Table Users {
+  id int [pk, increment]
+  login varchar
+  password varchar
+  teacher int
+  student int
+}
+Ref: Users.teacher - Teachers.id  
+Ref: Users.student - Students.id 
+
+Table Teachers {
+  id int [pk, increment]
+  full_name varchar
+  post varchar
+  inn varchar
+}
+
+Table Students {
+  id int [pk, increment]
+  full_name varchar
+  year_of_birth date
+  year_of_admission date
+  class int
+}
+Ref: Students.class > Class.id 
+
+Table Class {
+  id int [pk, increment]
+  class_letter varchar
+}
+
+Table Schedule {
+  class int
+  subject int
+  classroom varchar
+  day_of_weak int
+  lesson_day_number int
+}
+Ref: Schedule.class > Class.id 
+Ref: Schedule.subject > Subjects.id 
+
+
+Table Subjects {
+  id int [pk, increment]
+  name varchar
+  teacher int
+}
+Ref: Subjects.teacher > Teachers.id 
+
+
+Table CheckPoint {
+  id int [pk, increment]
+  class int
+  subject int
+  serial_number_of_lesson int
+  task varchar
+}
+Ref: CheckPoint.class > Class.id 
+Ref: CheckPoint.subject > Subjects.id 
+
+Table StudentWork {
+  student int
+  check_point int
+  mark int
+  answer varchar
+}
+Ref: StudentWork.student > Students.id 
+Ref: StudentWork.check_point > CheckPoint.id 
+
+
+
+
+
+
+
