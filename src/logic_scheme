@@ -10,8 +10,8 @@ Table Users {
   id int [pk, increment]
   login varchar
   password varchar
-  teacher int
   student int
+  teacher int
 }
 Ref: Users.teacher - Teachers.id  
 Ref: Users.student - Students.id 
@@ -35,6 +35,7 @@ Ref: Students.class > Class.id
 Table Class {
   id int [pk, increment]
   class_letter varchar
+  year_of_admission date
 }
 
 Table Schedule {
@@ -71,6 +72,7 @@ Table StudentWork {
   check_point int
   mark int
   answer varchar
+  comments varchar
 }
 Ref: StudentWork.student > Students.id 
 Ref: StudentWork.check_point > CheckPoint.id 
