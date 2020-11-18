@@ -211,7 +211,7 @@ Cores|RAM|Стоимость (руб./шт.)| Кол-во
 32|64| 320 000| 12
 32|128| 400 000| 45
 
-[PowerEdge R6515 (AMD EPYC 7F52, 3.50 GHz)]: https://www.dell.com/en-us/work/shop/servers-storage-and-networking/poweredge-r6515-rack-server/spd/poweredge-r6515/pe_r6515_13732a_vi_vp
+[PowerEdge R6515]: https://www.dell.com/en-us/work/shop/servers-storage-and-networking/poweredge-r6515-rack-server/spd/poweredge-r6515/pe_r6515_13732a_vi_vp
 Итого, общая стоимость серверов составит `33.5` млн. руб.
 
 #### Итого
